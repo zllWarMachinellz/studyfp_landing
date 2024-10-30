@@ -22,7 +22,7 @@ export const ModalidadItemComponent = ({ modalidad }: Props) => {
 
     return (
         <>
-        <Link href={`${modalidad.redirect}`} className="relative flex flex-grow !flex-row flex-col items-center rounded-[10px] rounded-[10px] border-[1px] border-gray-200 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#ffffff33] dark:!bg-navy-800 dark:text-white dark:shadow-none">
+        <Link href={`${modalidad.redirect}`} className="relative flex flex-grow !flex-row flex-col items-center rounded-[10px] rounded-[10px] border-[1px] border-gray-200 bg-white dark:bg-slate-900 bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#ffffff33] dark:!bg-navy-800 dark:text-white dark:shadow-none">
                     <div className="ml-[18px] flex h-[90px] w-auto flex-row items-center">
                         <div className="rounded-full bg-lightPrimary p-3 dark:bg-navy-700">
 

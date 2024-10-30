@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import { BannerComponent, ModalidadesComponent, PartnersComponent, SpeackWithUs, TestimoniesComponent, WeContactUComponent } from "./components";
+import { BannerComponent, ModalidadesComponent, PartnersComponent, ProgramsComponent, SpeackWithUs, TestimoniesComponent, WeContactUComponent } from "./components";
+import { CoursesComponent } from "./components/courses/courses";
 
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ export default function Home() {
         <BannerComponent/>
         <PartnersComponent/>
         <ModalidadesComponent/>
+        <ProgramsComponent/>
         <TestimoniesComponent/>
         <SpeackWithUs/>
         <WeContactUComponent/>

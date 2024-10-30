@@ -1,17 +1,16 @@
-import { courses} from "@/app/data/cursos"
-import { Course } from "@/interfaces";
-
-
+import { categories} from "@/app/data/cursos"
 
 export const CoursesComponent = () => {
 
-    const course = courses;
 
   return (
     <div>
+      <article className="bg-white rounded-lg">
+        
         {
-            
+          JSON.stringify(categories)        
         }
+      </article>
     </div>
   )
 }

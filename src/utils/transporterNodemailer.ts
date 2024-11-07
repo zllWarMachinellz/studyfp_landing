@@ -1,4 +1,4 @@
-'use server'
+
 
 import Nodemailer from 'nodemailer'
 

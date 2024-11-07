@@ -1,21 +1,17 @@
+
 import { sendEmailContact } from "@/app/actions/sendEmail/sendEmail";
 
-
 export const WeContactUComponent = () => {
+    
     const handleSubmit = async (formData: FormData) => {
-        
+        'use server'
         const rawFormData = {
-            name: formData.get('name'),
-            mail: formData.get('mail'),
-            phone: formData.get('phone'),
+            name: formData.get('name')?.toString(),
+            mail: formData.get('mail')?.toString(),
+            phone: formData.get('phone')?.toString(),
           }
 
-          const params = {
-            name: rawFormData.name?.toString(),
-            mail: rawFormData.mail?.toString(),
-            phone: rawFormData.phone?.toString(),
-          }
-         await sendEmailContact(params)
+        await sendEmailContact(rawFormData);
     };
 
     return (

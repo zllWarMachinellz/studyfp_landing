@@ -12,6 +12,7 @@ export const WeContactUComponent = () => {
           }
 
         await sendEmailContact(rawFormData);
+        
     };
 
     return (

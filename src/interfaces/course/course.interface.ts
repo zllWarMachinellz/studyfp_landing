@@ -1,11 +1,13 @@
 
 
 export interface Course{
-    id: string,
-    img: string,
-    name: string,
-    hours: number,
-    init_date: string,
-    end_date: string,
+    id: string
+    img: string
+    codigo: string
+    name: string
+    hours: number
+    init_date: Date
+    end_date: Date
+    requirements: string[]
     estado: boolean
 }

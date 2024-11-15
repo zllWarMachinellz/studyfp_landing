@@ -1,4 +1,4 @@
-import { Course } from "@/interfaces";
+import { course} from "@/interfaces/program/program.interface";
 
 export const categories = [
     {
@@ -22,21 +22,35 @@ export const categories = [
 ]
 
 const consorciEmpleados = ["Empleados", "Cataluña", "Presencial"]
-const consorciDesempleados = ["Desempleados", "Cataluña", "Presencial"]
+//const consorciDesempleados = ["Desempleados", "Cataluña", "Presencial"]
 
 
 
 
-export const courses = [
+export const courses: course[] = [
     {
         id: '1',
-        img: './public/imgs/cursos-online.jpg',
+        img: '/imgs/cursos/depilacion_mecanica/depilacion_mecanica.png',
         codigo: "MF0345_1",
         name: 'Depilación mecánica y decoloración del vello',
         hours: 90,
-        init_date: new Date('20-11-2024'),
-        end_date: new Date('11-12-2024'),
+        entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
+        init_date: new Date('11-20-2024'),
+        end_date: new Date('12-11-2024'),
+        requirements: consorciEmpleados,
+        estado: true
+    },
+    {
+        id: '2',
+        img: '/imgs/cursos/depilacion_mecanica/depilacion_mecanica.png',
+        codigo: "MF12125_1",
+        name: 'asdasdasdasdasdasd',
+        hours: 30,
+        entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
+        init_date: new Date('11-20-2024'),
+        end_date: new Date('12-11-2024'),
         requirements: consorciEmpleados,
         estado: true
     }
+
 ]

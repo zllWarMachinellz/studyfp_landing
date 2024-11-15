@@ -3,6 +3,9 @@ import React from 'react'
 import { TestimonieItemComponent } from './testimonieItem'
 
 export const TestimoniesComponent = () => {
+
+  //const testimoniesCarrousel = 
+
   return (
     <div>
       <div className="text-3xl md:text-4xl font-bold flex justify-center items-center">

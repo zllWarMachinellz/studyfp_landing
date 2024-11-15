@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { BannerComponent, ModalidadesComponent, PartnersComponent, ProgramsComponent, SpeackWithUs, TestimoniesComponent, WeContactUComponent } from "./components";
-import { CoursesComponent } from "./components/courses/courses";
 
 
 export const metadata: Metadata = {

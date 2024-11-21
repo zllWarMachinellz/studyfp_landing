@@ -58,11 +58,9 @@ export const ProgramItemComponent = ({ course }: Props) => {
           }
         </div>
         <div className="flex justify-center items-center rounded-full mt-4">
-          <button className="bg-[#284B63] rounded-full text-slate-100 p-3 font-bold">inscribirme ya!</button>
+          <button className="bg-[#284B63] hover:bg-[#3a6d8f] rounded-full text-slate-100 p-3 font-bold">inscribirme ya!</button>
         </div>
       </div>
-
-
     </div>
   )
 }

@@ -13,7 +13,7 @@ export const BannerComponent = () => {
                 </div>
                 <div className="flex justify-center md:justify-start">
                     <div className="bg-[#284B63] text-white text-sm md:text-lg font-bold p-3 w-[228.5px] md:w-1/4 flex justify-center items-center rounded-lg">
-                        <Link href={`https://studyfp.com/`} className="">¡Inscríbete gratis ahora!</Link>
+                        <Link href={`https://studyfp.com/`} className="">¡Cursos gratis pulsa aquí!</Link>
                     </div>
                 </div>
             </div>

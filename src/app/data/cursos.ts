@@ -40,17 +40,17 @@ export const courses: course[] = [
         requirements: consorciEmpleados,
         estado: true
     },
-    {
-        id: '2',
-        img: '/imgs/cursos/depilacion_mecanica/depilacion_mecanica.png',
-        codigo: "MF12125_1",
-        name: 'asdasdasdasdasdasd',
-        hours: 30,
-        entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
-        init_date: new Date('11-20-2024'),
-        end_date: new Date('12-11-2024'),
-        requirements: consorciEmpleados,
-        estado: true
-    }
+    // {
+    //     id: '2',
+    //     img: '/imgs/cursos/depilacion_mecanica/depilacion_mecanica.png',
+    //     codigo: "MF12125_1",
+    //     name: 'asdasdasdasdasdasd',
+    //     hours: 30,
+    //     entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
+    //     init_date: new Date('11-20-2024'),
+    //     end_date: new Date('12-11-2024'),
+    //     requirements: consorciEmpleados,
+    //     estado: true
+    // }
 
 ]

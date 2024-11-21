@@ -1,8 +1,13 @@
+'use client'
 import { testimonios } from '@/app/data/testimonios'
-import React from 'react'
+import React, { useState } from 'react'
 import { TestimonieItemComponent } from './testimonieItem'
 
+
 export const TestimoniesComponent = () => {
+  const [testimonies, setTestimonies] = useState([])
+
+  
 
   //const testimoniesCarrousel = 
 

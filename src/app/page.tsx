@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { BannerComponent, ModalidadesComponent, PartnersComponent, ProgramsComponent, SpeackWithUs, TestimoniesComponent, WeContactUComponent } from "./components";
+import { FooterComponent } from "./components/footer/footer";
 
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function Home() {
         <TestimoniesComponent/>
         <SpeackWithUs/>
         <WeContactUComponent/>
+        <FooterComponent/>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
 

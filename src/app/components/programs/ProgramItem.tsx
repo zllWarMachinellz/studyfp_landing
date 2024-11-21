@@ -20,7 +20,7 @@ export const ProgramItemComponent = ({ course }: Props) => {
   }
 
   return (
-    <div className="bg-white rounded-lg hover:bg-slate-300 transition-all duration-300 md:w-[400px] p-3 flex flex-col gap-5">
+    <div className="dark:bg-white bg-gray-200 shadow-xl rounded-lg hover:bg-slate-300 transition-all duration-300 w-100 md:w-96 p-3 flex flex-col gap-5">
       <div className="flex justify-center items-center">
         <Image className="rounded-xl" src={course.img} width={400} height={100} alt="Curso de depilación mecánica y decoloración del vello" />
       </div>
@@ -56,6 +56,9 @@ export const ProgramItemComponent = ({ course }: Props) => {
               el => <div key={el} className="bg-slate-700 rounded-full p-1 text-white"><span className="p-1">{el}</span></div>
             )
           }
+        </div>
+        <div className="flex justify-center items-center rounded-full mt-4">
+          <button className="bg-[#284B63] rounded-full text-slate-100 p-3 font-bold">inscribirme ya!</button>
         </div>
       </div>
 

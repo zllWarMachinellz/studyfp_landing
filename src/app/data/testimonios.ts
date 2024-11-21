@@ -20,16 +20,16 @@ export const testimonios = [
         testimonie:"Quiero darle las gracias a este instituto por darme la oportunidad de estudiar y aprender aquí todo excelente el trato con los profesores y todo el  personal.. Seguimos estudiando con la idea de un mejor porvenir. Gracias por su formación.. Excelentes 🙏",
         avatar:""
     },
-    {
-        id:'4', 
-        name: "Katrina", 
-        testimonie:"Increíble centro de formación. Una amabilidad excepcional. Te dan facilidad de estudio y en todo momento tienes un apoyo incondicional por parte del personal.",
-        avatar:""
-    },
-    {
-        id:'5', 
-        name: "Anabel", 
-        testimonie:"Muy buena entidad de formación.He realizado unos 10 cursos con ellos, todos de la rama de laboral y fiscal y estoy contentísima.",
-        avatar:""
-    },
+    // {
+    //     id:'4', 
+    //     name: "Katrina", 
+    //     testimonie:"Increíble centro de formación. Una amabilidad excepcional. Te dan facilidad de estudio y en todo momento tienes un apoyo incondicional por parte del personal.",
+    //     avatar:""
+    // },
+    // {
+    //     id:'5', 
+    //     name: "Anabel", 
+    //     testimonie:"Muy buena entidad de formación.He realizado unos 10 cursos con ellos, todos de la rama de laboral y fiscal y estoy contentísima.",
+    //     avatar:""
+    // },
 ]

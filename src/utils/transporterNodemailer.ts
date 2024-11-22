@@ -1,5 +1,4 @@
 
-
 import Nodemailer from 'nodemailer'
 
 export const transporter = Nodemailer.createTransport({

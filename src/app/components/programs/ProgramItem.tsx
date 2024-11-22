@@ -53,12 +53,12 @@ export const ProgramItemComponent = ({ course }: Props) => {
         <div className="flex gap-2">
           {
             course.requirements.map(
-              el => <div key={el} className="bg-slate-700 rounded-full p-1 text-white"><span className="p-1">{el}</span></div>
+              el => <div key={el} className="bg-slate-400 rounded-full p-1 text-white text-xs"><span className="p-1">{el}</span></div>
             )
           }
         </div>
         <div className="flex justify-center items-center rounded-full mt-4">
-          <button className="bg-[#284B63] hover:bg-[#3a6d8f] rounded-full text-slate-100 p-3 font-bold">inscribirme ya!</button>
+          <button className="bg-[#284B63] hover:bg-[#3a6d8f] rounded-full text-slate-100 p-3 font-bold text-sm">inscribirme ya!</button>
         </div>
       </div>
     </div>

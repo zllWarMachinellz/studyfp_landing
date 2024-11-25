@@ -1,68 +1,59 @@
 'use client'
-import { sendEmailContact } from "@/app/actions/sendEmail/sendEmail";
+import { useSendMail } from "@/app/hooks";
 import { Validations } from "@/utils/validations";
-import { Span } from "next/dist/trace";
-import { useEffect, useState, useTransition } from "react";
+import { useEffect, useState } from "react";
 
 
 export const WeContactUComponent = () => {
-    const [name, setName] = useState("");
-    const [correo, setCorreo] = useState("");
-    const [movil, setMovil] = useState("");
+    const [formStatus, setFormStatus] = useState({
+        name: '',
+        email: '',
+        movil: '',
+        politicy: false,
+    });
+    const { mailStatus, sendMail } = useSendMail();
     const [errorValidations, setErrorValidations] = useState({ status: false, message: "" });
-    const [statusMailer, setStatusMailer] = useState({ message: "" });
-    const [isPending, startTransition] = useTransition();
 
-    const handleInputNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setName(e.target.value);
+
+    const onInputChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value, checked, type } = target
+        setFormStatus({
+            ...formStatus,
+            [name]: type === 'checkbox' ? checked : value,
+
+        })
     }
 
-    const handleInputMailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setCorreo(e.target.value);
-    }
 
-    const handleInputMovilChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setMovil(e.target.value);
-    }
-
-    useEffect(()=>{
-        
-    },[errorValidations])
+    useEffect(() => {
+        if (errorValidations.status) {
+            const { ...restFotmStatus } = formStatus
+            const params = { ...restFotmStatus, ['courseName']: '' }
+            sendMail(params);
+        }
+    }, [errorValidations])
 
     const handleSubmit = () => {
 
         //Validación de campos//
 
         switch (false) {
-            case Validations.nameValidation(name):
+            case Validations.nameValidation(formStatus.name):
                 setErrorValidations({ status: false, message: "Nombre inválido" });
                 break;
-            case Validations.emailValidation(correo):
+            case Validations.emailValidation(formStatus.email):
                 setErrorValidations({ status: false, message: "Correo inválido" });
                 break;
-            case Validations.movilValidation(movil):
+            case Validations.movilValidation(formStatus.movil):
                 setErrorValidations({ status: false, message: "Número de teléfono inválido" });
                 break;
+            case formStatus.politicy:
+                setErrorValidations({ status: false, message: "Debes leer y aceptar la política de privacidad" });
+                break;
             default:
-                setErrorValidations({status: true, message:"Correcto"})
+                setErrorValidations({ status: true, message: "Correcto" })
                 break;
         }
-        // if(!Validations.nameValidation(name)) setErrorValidations({ status: false, message: "Nombre inválido" });
-        // if(!Validations.emailValidation(correo)) setErrorValidations({ status: false, message: "Correo inválido" });
-        // if(!Validations.nameValidation(movil)) setErrorValidations({ status: false, message: "Número de teléfono inválido" });
-        
-        //envio de mail si todo sale bien//
-        if (errorValidations.status) {
-            startTransition(async () => {
-
-                const res = await sendEmailContact(name, correo, movil);
-                res.succes ? setStatusMailer({ message: res.message }) : setStatusMailer({ message: res.message })
-
-            })
-
-        }
-
-        console.log(errorValidations);
     };
 
     return (
@@ -71,18 +62,20 @@ export const WeContactUComponent = () => {
                 <h2>Nosotros te contáctamos</h2>
             </div>
             <div className="flex justify-center py-32">
-                <form action={handleSubmit} className="flex flex-col w-[350px] bg-slate-50 p-10 rounded-[70px] py-20 gap-10 shadow-[0_20px_50px_rgba(31,_120,_50,_0.7)]  ">
-                    <input type="text" placeholder="Nombre" name="name" onChange={handleInputNameChange} />
-                    <input type="text" placeholder="tucorreo@hotmail.com" name="mail" onChange={handleInputMailChange} />
-                    <input type="text" placeholder="móvil" name="phone" onChange={handleInputMovilChange} />
+                <form action={handleSubmit} className="flex flex-col w-[350px] text-slate-800 bg-slate-50 p-10 rounded-[70px] py-20 gap-10 shadow-[0_20px_50px_rgba(31,_120,_50,_0.7)]  ">
+                    <input type="text" placeholder="Nombre" name="name" onChange={onInputChange} />
+                    <input type="text" placeholder="tucorreo@hotmail.com" name="email" onChange={onInputChange} />
+                    <input type="tel" placeholder="móvil" name="movil" onChange={onInputChange} />
+                    <div className="flex gap-3 justify-center">
+                        <input type="checkbox" name="politicy" onChange={onInputChange} /><span>Acepto <a className="text-indigo-900" href="https://studyfp.com/privacidad/">política de privacidad</a></span>
+                    </div>
                     {
-                        !errorValidations.status ? <span className="text-red-500 text-center">{errorValidations.message}</span> : <span></span>
+                        !errorValidations.status ? <span className="text-red-500 text-center text-xs">{errorValidations.message}</span> :
+                            mailStatus.status ? <span className="text-green-500 text-center text-xs">{mailStatus.message}</span> : <span className="text-red-500 text-center text-xs">{mailStatus.message}</span>
                     }
-                    {
-                        statusMailer.message !== "" ? <span className="text-red-500 text-center">{statusMailer.message}</span> : <span></span>
-                    }
-                    <div className="flex justify-center mt-4">
-                        <button className=" w-1/2 h-10  rounded-3xl text-white font-semibold bg-gradient-to-r from-green-700 to-green-400">Enviar</button>
+
+                    <div className="flex justify-center">
+                        <button className="w-1/2 h-10  rounded-3xl text-white font-semibold bg-gradient-to-r from-blue-950 to-green-400">Enviar</button>
                     </div>
                 </form>
             </div>

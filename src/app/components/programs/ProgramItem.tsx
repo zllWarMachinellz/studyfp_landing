@@ -70,7 +70,7 @@ export const ProgramItemComponent = ({ course }: Props) => {
               )
             }
           </div>
-          <button className="bg-stone-100 shadow-[0_5px_10px_1px_rgba(0,0,0,0.4)] hover:bg-[#3a6d8f] hover:text-white rounded-full text-slate-900 p-2 mt-4 font-bold text-sm" onClick={onButtonClick}>inscribirme ahora
+          <button className="bg-stone-100 shadow-[0_5px_10px_1px_rgba(0,0,0,0.4)] hover:bg-[#3a6d8f] hover:text-white rounded-full text-slate-900 p-2 mt-4 font-bold text-sm" onClick={onButtonClick}>Inscribirme ahora
           </button>
 
         </div>

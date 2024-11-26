@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { BanerTopComponent, BannerComponent, FormModalComponent, ModalidadesComponent, PartnersComponent, ProgramsComponent, SpeackWithUs, TestimoniesComponent, WeContactUComponent } from "./components";
+import { BannerComponent, FormModalComponent, ModalidadesComponent, PartnersComponent, ProgramsComponent, SpeackWithUs, TestimoniesComponent, WeContactUComponent } from "./components";
 import { FooterComponent } from "./components/footer/footer";
 
 

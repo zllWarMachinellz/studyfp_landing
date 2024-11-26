@@ -62,7 +62,7 @@ export const WeContactUComponent = () => {
                 <h2>Nosotros te contáctamos</h2>
             </div>
             <div className="flex justify-center py-32">
-                <form action={handleSubmit} className="flex flex-col w-[350px] text-slate-800 bg-slate-50 p-10 rounded-[70px] py-20 gap-10 shadow-[0_20px_50px_rgba(31,_120,_50,_0.7)]  ">
+                <form action={handleSubmit} className="flex flex-col w-[350px] text-slate-800 bg-slate-50 p-10 rounded-[70px] py-20 gap-10 shadow-[0_20px_50px_rgba(45,_77,_116,_0.7)]  ">
                     <input type="text" placeholder="Nombre" name="name" onChange={onInputChange} />
                     <input type="text" placeholder="tucorreo@hotmail.com" name="email" onChange={onInputChange} />
                     <input type="tel" placeholder="móvil" name="movil" onChange={onInputChange} />
@@ -75,7 +75,7 @@ export const WeContactUComponent = () => {
                     }
 
                     <div className="flex justify-center">
-                        <button className="w-1/2 h-10  rounded-3xl text-white font-semibold bg-gradient-to-r from-blue-950 to-green-400">Enviar</button>
+                        <button className="w-1/2 h-10  rounded-3xl text-white font-semibold bg-gradient-to-r from-blue-950 to-sky-500">Enviar</button>
                     </div>
                 </form>
             </div>

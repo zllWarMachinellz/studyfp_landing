@@ -83,7 +83,7 @@ export const FormModalComponent = () => {
 
   document.body.style.overflow = 'hidden';
   return (
-    <div className='backdrop-blur-sm fixed w-screen h-screen flex justify-center items-center flex-col '>
+    <div className='backdrop-blur-sm fixed w-screen h-screen flex justify-center items-center flex-col bg-[rgba(0,0,0,0.85)]'>
       <div className="flex w-screen h-screen justify-end end-10 top-10 fixed ">
         <IoMdCloseCircleOutline size={40} className="cursor-pointer" onClick={() => { setModalStatus(false), document.body.style.overflow = '' }} />
       </div>

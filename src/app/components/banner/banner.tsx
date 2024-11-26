@@ -12,13 +12,15 @@ export const BannerComponent = () => {
                     <p className="text-sm md:text-lg text-stone-500 dark:text-stone-400 my-6">Nuestros cursos subvencionados están financiados por todas las entidades estatales (FUNDAE, SEPE, SOC, Cámara de comercio...), lo que significa que puedes acceder a formación de calidad sin ningún coste por tu parte. Ofrecemos una amplia gama de cursos diseñados para mejorar tus habilidades, actualizar tus conocimientos y abrir nuevas oportunidades laborales. Ya seas un trabajador activo, autónomo o desempleado, tenemos un curso para ti.</p>
                 </div>
                 <div className="flex justify-center md:justify-start">
-                    <div className="bg-[#284B63] text-white text-sm md:text-lg font-bold p-3 w-[228.5px] md:w-1/4 flex justify-center items-center rounded-lg">
-                        <Link href={`https://studyfp.com/`} className="">¡Cursos gratis pulsa aquí!</Link>
-                    </div>
+                    <Link href={`https://studyfp.com/`} className="w-[228.5px] md:w-1/4 ">
+                        <div className="bg-[#284B63] text-white text-sm md:text-lg font-bold p-3 flex justify-center items-center rounded-lg">
+                            <span>¡Cursos gratis pulsa aquí!</span>
+                        </div>
+                    </Link>
                 </div>
             </div>
             <div className="hidden md:flex">
-                <Image src={`/imgs/banner/banner_sepe.png`} width={'1920'} height={'1080'} alt="banner cursos sepe"></Image>
+                <Image className="drop-shadow-[0_35px_35px_rgba(0,0,0,0.50)]" src={`/imgs/banner/banner_sepe.png`} width={'1920'} height={'1080'} alt="banner cursos sepe"></Image>
             </div>
         </div>
     );

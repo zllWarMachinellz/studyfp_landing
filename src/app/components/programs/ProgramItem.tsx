@@ -38,9 +38,9 @@ export const ProgramItemComponent = ({ course }: Props) => {
           <Image className="rounded-xl" src={course.img} width={400} height={100} alt="Curso de depilación mecánica y decoloración del vello" />
         </div>
         <div>
-          <h4 className="dark:text-slate-800 font-semibold">
+          <h3 className="dark:text-slate-800 font-semibold">
             {course.codigo} - {course.name}
-          </h4>
+          </h3>
         </div>
         <div className="flex flex-col gap-1 text-slate-800">
           <div className="flex justify-between">

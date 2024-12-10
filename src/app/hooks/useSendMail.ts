@@ -15,9 +15,10 @@ export const useSendMail = () => {
 
 
     const sendMail = async ({email,movil,name,courseName}: EmailParams) =>{
-        
+
 
             const res = await sendEmailContact({email,movil,name,courseName});
+            console.log(res.message)
             res.succes ? setMailStatus({ status: true, message: res.message }) : setMailStatus({status: false, message: res.message })
        
     }

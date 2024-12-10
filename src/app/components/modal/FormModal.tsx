@@ -39,7 +39,7 @@ export const FormModalComponent = () => {
       sendMail(params)
     }
 
-  }, [errorValidations,CourseInfo,formStatus,sendMail])
+  }, [errorValidations])
 
 
   if (!ModalStatus) {

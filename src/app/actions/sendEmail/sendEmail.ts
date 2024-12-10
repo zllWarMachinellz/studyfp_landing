@@ -19,6 +19,7 @@ export const sendEmailContact = async ({name,email,movil,courseName}: EmailParam
         });
         return { succes: true, message: "¡Muchas gracias!, en breve nos pondremos en contacto" }
     } catch (error) {
+        console.log(error)
         return { succes: false, message: "Correo no enviado, revisa tu correo por favor" }
     }
 

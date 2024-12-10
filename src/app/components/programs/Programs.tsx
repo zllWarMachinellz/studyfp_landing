@@ -2,6 +2,9 @@ import { courses } from "@/app/data/cursos"
 import { ProgramItemComponent } from "./ProgramItem"
 
 export const ProgramsComponent = () => {
+
+  const filterCourses = courses.filter((course)=>course.estado === true)
+
   return (
 
     <div className=''>
@@ -10,7 +13,7 @@ export const ProgramsComponent = () => {
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-6 md:py-20 p-5 py-20 ">
         {
-          courses.map((course) => (
+          filterCourses.map((course) => (
             <ProgramItemComponent key={course.id} course={course} />
           ))
         }

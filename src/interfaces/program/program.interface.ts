@@ -6,8 +6,8 @@ export interface course {
     name: string
     hours: number
     entidad_subvencion: string
-    init_date: Date
-    end_date: Date
+    init_date: Date | string
+    end_date: Date | string
     requirements: string[]
     estado: boolean
 }

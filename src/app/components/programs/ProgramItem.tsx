@@ -15,14 +15,12 @@ interface Props {
 export const ProgramItemComponent = ({ course }: Props) => {
   const { setModalStatus } = useModalFormStatus();
   const { setCourseInfo } = useCourseName();
-  const initDate = momentjs(course.init_date);
-  const endDate = momentjs(course.end_date);
 
+const dates = {
+      fechaInicio: momentjs(course.init_date).format('DD-MM-YYYY'),
+      fechaFin: momentjs(course.end_date).format('DD-MM-YYYY'),
+    }
 
-  const dates = {
-    fechaInicio: initDate.format('DD-MM-YYYY'),
-    fechaFin: endDate.format('DD-MM-YYYY'),
-  }
 
   const onButtonClick = () => {
     setCourseInfo(course.name);
@@ -31,8 +29,7 @@ export const ProgramItemComponent = ({ course }: Props) => {
 
 
   return (
-    <div>
-
+    <article>
       <div className="dark:bg-white bg-gray-200 shadow-xl rounded-lg hover:bg-slate-300 transition-all duration-300 w-100 md:w-96 p-3 flex flex-col gap-5">
         <div className="flex justify-center items-center">
           <Image className="rounded-xl" src={course.img} width={400} height={100} alt="Curso de depilación mecánica y decoloración del vello" />
@@ -50,8 +47,8 @@ export const ProgramItemComponent = ({ course }: Props) => {
                 <span>{course.hours} horas</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-bold">Inicio: {dates.fechaInicio}</span>
-                <span className="font-bold">Fin: {dates.fechaFin}</span>
+                <span className="font-bold">Inicio: {course.init_date === "Proximamente" ? "Próximamente" : dates.fechaInicio}</span>
+                <span className="font-bold">Fin: {course.end_date=== "Proximamente" ? "Próximamente" :dates.fechaFin}</span>
               </div>
             </div>
             <div className="flex relative flex-col text-xs">
@@ -75,6 +72,6 @@ export const ProgramItemComponent = ({ course }: Props) => {
 
         </div>
       </div>
-    </div>
+    </article>
   )
 }

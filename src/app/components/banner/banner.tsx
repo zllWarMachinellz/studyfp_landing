@@ -6,7 +6,7 @@ export const BannerComponent = () => {
         <div className="flex flex-row md:pl-4">
             <div className="flex flex-col justify-center">
                 <div className=" text-center md:text-left">
-                    <h1 className="text-[40px] md:text-6xl font-extrabold text-gray-900 dark:text-slate-100">Cursos 100% subvencionados</h1>
+                    <h1 className="text-[40px] md:text-6xl font-extrabold bg-gradient-to-b from-slate-600 dark:from-slate-200 to-blue-800 dark:to-blue-800 bg-clip-text text-transparent">Cursos 100% subvencionados</h1>
                 </div>
                 <div className="flex text-center md:text-left">
                     <p className="text-sm md:text-lg text-stone-500 dark:text-stone-400 my-6">Nuestros cursos subvencionados están financiados por todas las entidades estatales (FUNDAE, SEPE, SOC, Cámara de comercio...), lo que significa que puedes acceder a formación de calidad sin ningún coste por tu parte. Ofrecemos una amplia gama de cursos diseñados para mejorar tus habilidades, actualizar tus conocimientos y abrir nuevas oportunidades laborales. Ya seas un trabajador activo, autónomo o desempleado, tenemos un curso para ti.</p>

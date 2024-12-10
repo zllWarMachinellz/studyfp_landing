@@ -37,8 +37,8 @@ export const courses: course[] = [
         name: 'Depilación mecánica y decoloración del vello',
         hours: 90,
         entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
-        init_date: new Date('11-20-2024'),
-        end_date: new Date('12-11-2024'),
+        init_date: '11-20-2024',
+        end_date: '12-11-2024',
         requirements: consorciEmpleados,
         estado: false
     },
@@ -49,8 +49,8 @@ export const courses: course[] = [
         name: 'Iniciación a la informática y en competencias digitales básicas',
         hours: 40,
         entidad_subvencion: "/imgs/logos/logo-socs.svg",
-        init_date: new Date('12-09-2024'),
-        end_date: new Date('12-20-2024'),
+        init_date: '12-09-2024',
+        end_date: '12-20-2024',
         requirements: socAda,
         estado: true
     },
@@ -61,8 +61,8 @@ export const courses: course[] = [
         name: 'Aplicación de la hoja de cálculo Excel. Nivel inicial',
         hours: 40,
         entidad_subvencion: "/imgs/logos/logo-socs.svg",
-        init_date: new Date('12-23-2024'),
-        end_date: new Date('01-16-2025'),
+        init_date: '12-23-2024',
+        end_date: '01-16-2025',
         requirements: socAda,
         estado: true
     },
@@ -73,8 +73,8 @@ export const courses: course[] = [
         name: 'Atención al cliente del pequeño comercio en lengua extranjera, Inglés',
         hours: 30,
         entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
-        init_date: "Proximamente",
-        end_date: "Proximamente",
+        init_date: "Por definir",
+        end_date: "Por definir",
         requirements: consorciSectorial,
         estado: true
     },
@@ -85,8 +85,8 @@ export const courses: course[] = [
         name: 'Neuromarketing curso virtual para empleados',
         hours: 35,
         entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
-        init_date: "Proximamente",
-        end_date: "Proximamente",
+        init_date: "Por definir",
+        end_date: "Por definir",
         requirements: consorciSectorial,
         estado: true
     },
@@ -97,8 +97,8 @@ export const courses: course[] = [
         name: 'Atención y venta en establecimientos comerciales',
         hours: 30,
         entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
-        init_date: "Proximamente",
-        end_date: "Proximamente",
+        init_date: "Por definir",
+        end_date: "Por definir",
         requirements: consorciSectorial,
         estado: true
     },
@@ -109,11 +109,47 @@ export const courses: course[] = [
         name: 'Gestión del comercio exterior curso virtual',
         hours: 40,
         entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
-        init_date: "Proximamente",
-        end_date: "Proximamente",
+        init_date: "Por definir",
+        end_date: "Por definir",
         requirements: consorciSectorial,
         estado: true
-    }
-
+    },
+    {
+        id: '8',
+        img: '/imgs/cursos/sectorial/sectorial-contabilidad-basica.webp',
+        codigo: "ADGD0061",
+        name: 'Contabilidad básica curso virtual para empleados',
+        hours: 60,
+        entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
+        init_date: "16-12-2024",
+        end_date: "04-01-2025",
+        requirements: consorciSectorial,
+        estado: true
+    },
+    {
+        id: '9',
+        img: '/imgs/cursos/sectorial/sectorial-contabilidad-avanzada.webp',
+        codigo: "ADGD0064",
+        name: 'Contabilidad avanzada curso virtual para empleados',
+        hours: 40,
+        entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
+        init_date: "05-01-2025",
+        end_date: "23-01-2025",
+        requirements: consorciSectorial,
+        estado: true
+    },
+    {
+        id: '10',
+        img: '/imgs/cursos/sectorial/sectorial-gestion-tesoreria.webp',
+        codigo: "ADGD0026",
+        name: 'Gestión de tesoreria curso virtual para empleados',
+        hours: 60,
+        entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
+        init_date: "Por definir",
+        end_date: "Por definir",
+        requirements: consorciSectorial,
+        estado: true
+    },
+    
 
 ]

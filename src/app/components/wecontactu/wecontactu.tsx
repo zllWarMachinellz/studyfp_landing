@@ -31,7 +31,7 @@ export const WeContactUComponent = () => {
             const params = { ...restFotmStatus, ['courseName']: '' }
             sendMail(params);
         }
-    }, [errorValidations])
+    }, [errorValidations,formStatus,sendMail])
 
     const handleSubmit = () => {
 

@@ -2,7 +2,6 @@
 import { useCourseName } from "@/app/store/CourseName/CourseNameStore";
 import { useModalFormStatus } from "@/app/store/ModalForm/ModalStore";
 import { course } from "@/interfaces"
-import momentjs from "moment"
 import Image from "next/image"
 import { TbClockHour8 } from "react-icons/tb";
 
@@ -16,11 +15,6 @@ export const ProgramItemComponent = ({ course }: Props) => {
   const { setModalStatus } = useModalFormStatus();
   const { setCourseInfo } = useCourseName();
 
-const dates = {
-      fechaInicio: momentjs(course.init_date).format('DD-MM-YYYY'),
-      fechaFin: momentjs(course.end_date).format('DD-MM-YYYY'),
-    }
-
 
   const onButtonClick = () => {
     setCourseInfo(course.name);
@@ -32,7 +26,7 @@ const dates = {
     <article>
       <div className="dark:bg-white bg-gray-200 shadow-xl rounded-lg hover:bg-slate-300 transition-all duration-300 w-100 md:w-96 p-3 flex flex-col gap-5">
         <div className="flex justify-center items-center">
-          <Image className="rounded-xl" src={course.img} width={400} height={100} alt="Curso de depilación mecánica y decoloración del vello" />
+          <Image className="rounded-xl" src={course.img} width={400} height={100} alt={course.name} />
         </div>
         <div>
           <h3 className="dark:text-slate-800 font-semibold">
@@ -47,14 +41,14 @@ const dates = {
                 <span>{course.hours} horas</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-bold">Inicio: {course.init_date === "Proximamente" ? "Próximamente" : dates.fechaInicio}</span>
-                <span className="font-bold">Fin: {course.end_date=== "Proximamente" ? "Próximamente" :dates.fechaFin}</span>
+                <span className="font-bold">Inicio: {course.init_date}</span>
+                <span className="font-bold">Fin: {course.end_date}</span>
               </div>
             </div>
             <div className="flex relative flex-col text-xs">
               <div className="flex flex-col bg-slate-200 absolute -translate-x-[180px] w-48 p-1 rounded-tl-full shadow-md">
                 <span className="translate-x-6">subvencionado por</span>
-                <Image className="translate-x-4" src={course.entidad_subvencion} width={150} height={220} alt="logo del consorci" />
+                <Image className="translate-x-4" src={course.entidad_subvencion} width={150} height={220} alt="logo de la entidad de la subvencion" />
               </div>
             </div>
           </div>

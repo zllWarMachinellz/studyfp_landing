@@ -5,7 +5,7 @@ import { FooterComponent } from "./components/footer/footer";
 const canonical = "https://cursosepegratis.es"
 export const metadata: Metadata = {
   title: 'Cursos 100% subvencionados',
-  description: 'Descubre tu camino y expande tus conocimientos con nuestra amplia oferta de cursos de formación profesional y 100% subvencionados por instituciones estatales reconocidas como el SEPE, SOC, FUNDAE, Cámara de comercio ... No te piertas esta gran oportunidad',
+  description: 'Expande conocimientos con nuestra oferta de cursos 100% subvencionados por instituciones como el Sepe, Soc, Fundae y Cámara de comercio.',
   alternates:{
     canonical: canonical,
   },

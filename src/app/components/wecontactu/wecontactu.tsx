@@ -1,7 +1,7 @@
 'use client'
 import { useSendMail } from "@/app/hooks";
 import { Validations } from "@/utils/validations";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 
 export const WeContactUComponent = () => {
@@ -11,8 +11,13 @@ export const WeContactUComponent = () => {
         movil: '',
         politicy: false,
     });
-    const { mailStatus, sendMail } = useSendMail();
+    const { mailStatus, sendMail, setMailStatus } = useSendMail();
     const [errorValidations, setErrorValidations] = useState({ status: false, message: "" });
+    const inputName = useRef<HTMLInputElement>(null);
+    const inputEmail = useRef<HTMLInputElement>(null);
+    const inputMovil = useRef<HTMLInputElement>(null);
+    const inputPoliticy = useRef<HTMLInputElement>(null);
+
 
 
     const onInputChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,16 +25,36 @@ export const WeContactUComponent = () => {
         setFormStatus({
             ...formStatus,
             [name]: type === 'checkbox' ? checked : value,
-
         })
+
     }
 
-
+    useEffect(() => {
+        if (mailStatus.status) {
+            setFormStatus({
+                name: '',
+                email: '',
+                movil: '',
+                politicy: false,
+            })
+            inputName.current!.value = ""
+            inputEmail.current!.value = ""
+            inputMovil.current!.value = ""
+            inputPoliticy.current!.checked = false
+            setInterval(() => {
+                setMailStatus({
+                    status: false, message: ''
+                })
+            }, 3000);
+        }
+    }, [mailStatus]);
+    
     useEffect(() => {
         if (errorValidations.status) {
             const { ...restFotmStatus } = formStatus
             const params = { ...restFotmStatus, ['courseName']: '' }
             sendMail(params);
+
         }
     }, [errorValidations])
 
@@ -63,11 +88,11 @@ export const WeContactUComponent = () => {
             </div>
             <div className="flex justify-center py-32">
                 <form action={handleSubmit} className="flex flex-col w-[350px] text-slate-800 bg-slate-50 p-10 rounded-[70px] py-20 gap-10 shadow-[0_20px_50px_rgba(45,_77,_116,_0.7)]  ">
-                    <input type="text" placeholder="Nombre" name="name" onChange={onInputChange} />
-                    <input type="text" placeholder="tucorreo@hotmail.com" name="email" onChange={onInputChange} />
-                    <input type="tel" placeholder="móvil" name="movil" onChange={onInputChange} />
+                    <input ref={inputName} type="text" placeholder="Nombre" name="name" onChange={onInputChange} />
+                    <input ref={inputEmail} type="text" placeholder="tucorreo@hotmail.com" name="email" onChange={onInputChange} />
+                    <input ref={inputMovil} type="tel" placeholder="móvil" name="movil" onChange={onInputChange} />
                     <div className="flex gap-3 justify-center">
-                        <input type="checkbox" name="politicy" onChange={onInputChange} /><span>Acepto <a className="text-indigo-900" href="https://studyfp.com/privacidad/">política de privacidad</a></span>
+                        <input ref={inputPoliticy} type="checkbox" name="politicy" onChange={onInputChange} /><span>Acepto <a className="text-indigo-900" href="https://studyfp.com/privacidad/">política de privacidad</a></span>
                     </div>
                     {
                         !errorValidations.status ? <span className="text-red-500 text-center text-xs">{errorValidations.message}</span> :

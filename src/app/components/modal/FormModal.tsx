@@ -3,7 +3,7 @@ import { useSendMail } from "@/app/hooks";
 import { useCourseName } from "@/app/store/CourseName/CourseNameStore";
 import { useModalFormStatus } from "@/app/store/ModalForm/ModalStore";
 import { Validations } from "@/utils/validations";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 
 export const FormModalComponent = () => {
@@ -16,20 +16,36 @@ export const FormModalComponent = () => {
     movil: '',
     politicy: false,
   });
-  const { mailStatus, sendMail } = useSendMail();
+  const { mailStatus, sendMail, setMailStatus } = useSendMail();
   const [errorValidations, setErrorValidations] = useState({ status: false, message: "" });
+  const inputName = useRef<HTMLInputElement>(null);
+  const inputEmail = useRef<HTMLInputElement>(null);
+  const inputMovil = useRef<HTMLInputElement>(null);
+  const inputPoliticy = useRef<HTMLInputElement>(null);
+
+
 
   useEffect(() => {
+    console.log(mailStatus.status)
     if (mailStatus.status) {
+      console.log("Hola")
       setFormStatus({
         name: '',
         email: '',
         movil: '',
         politicy: false,
-      });
+      })
+      inputName.current!.value = ""
+      inputEmail.current!.value = ""
+      inputMovil.current!.value = ""
+      inputPoliticy.current!.checked = false
+      setInterval(() => {
+        setMailStatus({
+          status: false, message: ''
+        })
+      }, 3000);
     }
-    
-  }, [mailStatus])
+  }, [mailStatus]);
 
   useEffect(() => {
 
@@ -88,12 +104,12 @@ export const FormModalComponent = () => {
         <IoMdCloseCircleOutline size={40} className="cursor-pointer" onClick={() => { setModalStatus(false), document.body.style.overflow = '' }} />
       </div>
       <form action={handleSubmit} className='flex flex-col w-[350px] text-slate-800 bg-slate-50 p-10 rounded-[70px] py-20 gap-10 z-10'>
-        <input type="text" placeholder="Nombre" name="name" onChange={onInputChange} />
-        <input type="text" placeholder="tucorreo@hotmail.com" name="email" onChange={onInputChange} />
-        <input type="tel" placeholder="móvil" name="movil" onChange={onInputChange} />
+        <input ref={inputName} type="text" placeholder="Nombre" name="name" onChange={onInputChange} />
+        <input ref={inputEmail} type="text" placeholder="tucorreo@hotmail.com" name="email" onChange={onInputChange} />
+        <input ref={inputMovil} type="tel" placeholder="móvil" name="movil" onChange={onInputChange} />
         <input type="text" name='course' value={CourseInfo} readOnly={true} />
         <div className="flex gap-3 justify-center">
-          <input type="checkbox" name="politicy" onChange={onInputChange} /><span>Acepto <a className="text-indigo-900" href="https://studyfp.com/privacidad/">política de privacidad</a></span>
+          <input ref={inputPoliticy} type="checkbox" name="politicy" onChange={onInputChange} /><span>Acepto <a className="text-indigo-900" href="https://studyfp.com/privacidad/">política de privacidad</a></span>
         </div>
         {
           !errorValidations.status ? <span className="text-red-500 text-center text-xs">{errorValidations.message}</span> :

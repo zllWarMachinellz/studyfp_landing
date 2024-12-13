@@ -23,5 +23,5 @@ export const useSendMail = () => {
        
     }
     
-    return { sendMail,  mailStatus}
+    return { sendMail,  mailStatus, setMailStatus}
 }

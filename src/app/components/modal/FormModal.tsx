@@ -57,8 +57,7 @@ export const FormModalComponent = () => {
 
   }, [errorValidations])
 
-
-  if (!ModalStatus) {
+  if(!ModalStatus){
     return null;
   }
 
@@ -70,8 +69,6 @@ export const FormModalComponent = () => {
 
     })
   }
-
-
 
 
   const handleSubmit = () => {
@@ -96,12 +93,11 @@ export const FormModalComponent = () => {
         break;
     }
   };
-
   document.body.style.overflow = 'hidden';
   return (
-    <div className='backdrop-blur-sm fixed w-screen h-screen flex justify-center items-center flex-col bg-[rgba(0,0,0,0.85)]'>
+    <div className='backdrop-blur-sm fixed w-screen h-screen flex justify-center items-center flex-col bg-[rgba(0,0,0,0.85)] z-[999]'>
       <div className="flex w-screen h-screen justify-end end-10 top-10 fixed ">
-        <IoMdCloseCircleOutline size={40} className="cursor-pointer" onClick={() => { setModalStatus(false), document.body.style.overflow = '' }} />
+        <IoMdCloseCircleOutline size={40} className="cursor-pointer fill-white" onClick={() => { setModalStatus(false), document.body.style.overflow = '' }} />
       </div>
       <form action={handleSubmit} className='flex flex-col w-[350px] text-slate-800 bg-slate-50 p-10 rounded-[70px] py-20 gap-10 z-10'>
         <input ref={inputName} type="text" placeholder="Nombre" name="name" onChange={onInputChange} />

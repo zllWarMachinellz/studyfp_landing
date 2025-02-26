@@ -8,6 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'custom-gradient': `linear-gradient(to left, #434343, #000000)`
+      },
+      screens: {
+        breackpointlg: "1220px",
+        breackpointmd: "800px",
+        bannerpointlg: "1191px"
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

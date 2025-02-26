@@ -1,5 +1,4 @@
 
-
 export const FooterComponent = () => {
   return (
     <footer>
@@ -9,9 +8,6 @@ export const FooterComponent = () => {
           <a href="https://studyfp.com/privacidad/"> ▪️ Política de privacidad de los datos</a>
           <a href="https://studyfp.com/aviso-legal/"> ▪️ Aviso legal</a>
         </div>
-      </div>
-      <div className="flex justify-center items-center dark:text-slate-300">
-        <span>&copy; Cursos Sepe Gratis todos los derechos reservados 2025</span>
       </div>
     </footer>
   )

@@ -8,14 +8,14 @@ export const categories: modalidad[] = [
         courses: 7,
         redirect: 'https://studyfp.com/cursos/cursos-presenciales/',
     },
-    {
-        id: '2',
-        //img: './public/imgs/cursos-semipresenciales.jpg',
-        name: 'Semipresencial',
-        courses: 2,
-        redirect: 'https://studyfp.com/cursos/cursos-semipresenciales/',
+    // {
+    //     id: '2',
+    //     //img: './public/imgs/cursos-semipresenciales.jpg',
+    //     name: 'Semipresencial',
+    //     courses: 2,
+    //     redirect: 'https://studyfp.com/cursos/cursos-semipresenciales/',
 
-    },
+    // },
     {
         id: '3',
         //img: './public/imgs/cursos-online.jpg',

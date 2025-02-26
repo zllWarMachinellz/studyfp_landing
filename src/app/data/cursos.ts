@@ -37,8 +37,8 @@ export const courses: course[] = [
         name: 'Depilación mecánica y decoloración del vello',
         hours: 90,
         entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
-        init_date: '11-20-2024',
-        end_date: '12-11-2024',
+        init_date: '20-11-2024',
+        end_date: '11-12-2024',
         requirements: consorciEmpleados,
         estado: false
     },
@@ -49,8 +49,8 @@ export const courses: course[] = [
         name: 'Iniciación a la informática y en competencias digitales básicas',
         hours: 40,
         entidad_subvencion: "/imgs/logos/logo-socs.svg",
-        init_date: '12-09-2024',
-        end_date: '12-20-2024',
+        init_date: '09-12-2024',
+        end_date: '20-12-2024',
         requirements: socAda,
         estado: true
     },
@@ -61,8 +61,8 @@ export const courses: course[] = [
         name: 'Aplicación de la hoja de cálculo Excel. Nivel inicial',
         hours: 40,
         entidad_subvencion: "/imgs/logos/logo-socs.svg",
-        init_date: '12-23-2024',
-        end_date: '01-16-2025',
+        init_date: '23-12-2024',
+        end_date: '16-01-2025',
         requirements: socAda,
         estado: true
     },
@@ -150,6 +150,44 @@ export const courses: course[] = [
         requirements: consorciSectorial,
         estado: true
     },
+    {
+        id: '11',
+        img: '/imgs/cursos/foap/foap-direcció-cordinació-infantil-lleure.webp',
+        codigo: "SSCB0211",
+        name: 'Dirección/coordinación de actividades de educación en el ocio infantil',
+        hours: 290,
+        entidad_subvencion: "/imgs/logos/logo-socs.svg",
+        init_date: "Por definir",
+        end_date: "Por definir",
+        requirements: socAda,
+        estado: true
+    },
+    {
+        id: '12',
+        img: '/imgs/cursos/foap/foap-atenció-sociosanitaria-domicili.webp',
+        codigo: "SSCS0108",
+        name: 'Atención sociosanitaria a personas en el domicilio',
+        hours: 480,
+        entidad_subvencion: "/imgs/logos/logo-socs.svg",
+        init_date: "25-02-2025",
+        end_date: "16-07-2025",
+        requirements: socAda,
+        estado: true
+    },
+    {
+        id: '13',
+        img: '/imgs/cursos/foap/foap-gestión-llamadas-teleasistencia.webp',
+        codigo: "SSCG0111",
+        name: 'Gestión de llamadas de teleasistencia',
+        hours: 230,
+        entidad_subvencion: "/imgs/logos/logo-socs.svg",
+        init_date: "27-06-2025",
+        end_date: "Por definir",
+        requirements: socAda,
+        estado: true
+    },
+
+
     
 
 ]

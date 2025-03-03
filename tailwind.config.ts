@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'custom-gradient': `linear-gradient(to left, #434343, #000000)`
+        'custom-gradient': `linear-gradient(to left,rgb(255, 255, 255), #000000)`
       },
       screens: {
         breackpointlg: "1220px",

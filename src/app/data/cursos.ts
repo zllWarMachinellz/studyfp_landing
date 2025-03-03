@@ -212,7 +212,7 @@ export const courses: course[] = [
     },
     {
         id: '16',
-        img: '/imgs/cursos/consorci/Diagnóstico-protocolos-masajes-estéticos-técnicas sensoriales.webp',
+        img: '/imgs/cursos/consorci/diagnostico-protocolos-masajes-esteticos-tecnicas-sensoriales.webp',
         codigo: "MF0789",
         name: 'Diagnóstico y protocolos para masajes estéticos y técnicas sensoriales',
         hours: 90,

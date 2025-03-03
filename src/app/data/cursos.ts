@@ -23,7 +23,7 @@ export const categories = [
 
 const consorciEmpleados = ["Empleados", "Cataluña", "Presencial"]
 const socAda = ["Desempleadas", "Mujeres", "Modalidad Mixta"]
-const consorciSectorial = ["Empleados", "Vitual"]
+const consorciSectorial = ["Empleados", "Virtual"]
 //const consorciDesempleados = ["Desempleados", "Cataluña", "Presencial"]
 
 
@@ -36,7 +36,7 @@ export const courses: course[] = [
         codigo: "MF0345",
         name: 'Depilación mecánica y decoloración del vello',
         hours: 90,
-        entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
+        entidad_subvencion: "/imgs/logos/consorci.png",
         init_date: '20-11-2024',
         end_date: '11-12-2024',
         requirements: consorciEmpleados,
@@ -72,7 +72,7 @@ export const courses: course[] = [
         codigo: "COMT0013",
         name: 'Atención al cliente del pequeño comercio en lengua extranjera, Inglés',
         hours: 30,
-        entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
+        entidad_subvencion: "/imgs/logos/consorci.png",
         init_date: "Por definir",
         end_date: "Por definir",
         requirements: consorciSectorial,
@@ -84,7 +84,7 @@ export const courses: course[] = [
         codigo: "COMM0014",
         name: 'Neuromarketing curso virtual para empleados',
         hours: 35,
-        entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
+        entidad_subvencion: "/imgs/logos/consorci.png",
         init_date: "Por definir",
         end_date: "Por definir",
         requirements: consorciSectorial,
@@ -96,7 +96,7 @@ export const courses: course[] = [
         codigo: "COMT0017",
         name: 'Atención y venta en establecimientos comerciales',
         hours: 30,
-        entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
+        entidad_subvencion: "/imgs/logos/consorci.png",
         init_date: "Por definir",
         end_date: "Por definir",
         requirements: consorciSectorial,
@@ -108,7 +108,7 @@ export const courses: course[] = [
         codigo: "COMT0015",
         name: 'Gestión del comercio exterior curso virtual',
         hours: 40,
-        entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
+        entidad_subvencion: "/imgs/logos/consorci.png",
         init_date: "Por definir",
         end_date: "Por definir",
         requirements: consorciSectorial,
@@ -120,7 +120,7 @@ export const courses: course[] = [
         codigo: "ADGD0061",
         name: 'Contabilidad básica curso virtual para empleados',
         hours: 60,
-        entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
+        entidad_subvencion: "/imgs/logos/consorci.png",
         init_date: "16-12-2024",
         end_date: "04-01-2025",
         requirements: consorciSectorial,
@@ -132,7 +132,7 @@ export const courses: course[] = [
         codigo: "ADGD0064",
         name: 'Contabilidad avanzada curso virtual para empleados',
         hours: 40,
-        entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
+        entidad_subvencion: "/imgs/logos/consorci.png",
         init_date: "05-01-2025",
         end_date: "23-01-2025",
         requirements: consorciSectorial,
@@ -144,7 +144,7 @@ export const courses: course[] = [
         codigo: "ADGD0026",
         name: 'Gestión de tesoreria curso virtual para empleados',
         hours: 60,
-        entidad_subvencion: "/imgs/cursos/depilacion_mecanica/consorci.png",
+        entidad_subvencion: "/imgs/logos/consorci.png",
         init_date: "Por definir",
         end_date: "Por definir",
         requirements: consorciSectorial,
@@ -186,6 +186,91 @@ export const courses: course[] = [
         requirements: socAda,
         estado: true
     },
+    {
+        id: '14',
+        img: '/imgs/cursos/consorci/depilacion_mecanica.webp',
+        codigo: "MF0345",
+        name: 'Depilación mecánica y decoloración del vello',
+        hours: 90,
+        entidad_subvencion: "/imgs/logos/consorci.png",
+        init_date: "14-01-2025",
+        end_date: "04-02-2024",
+        requirements: consorciEmpleados,
+        estado: true
+    },
+    {
+        id: '15',
+        img: '/imgs/cursos/consorci/masaje-estético-manual-mecánico.webp',
+        codigo: "MF0063",
+        name: 'Masaje estético manual y mecánico para empleados',
+        hours: 90,
+        entidad_subvencion: "/imgs/logos/consorci.png",
+        init_date: "07-05-2025",
+        end_date: "10-06-2025",
+        requirements: consorciEmpleados,
+        estado: true
+    },
+    {
+        id: '16',
+        img: '/imgs/cursos/consorci/diagnóstico-protocolos-masajes-estéticos-técnicas sensoriales.webp',
+        codigo: "MF0789",
+        name: 'Diagnóstico y protocolos para masajes estéticos y técnicas sensoriales',
+        hours: 90,
+        entidad_subvencion: "/imgs/logos/consorci.png",
+        init_date: "07-04-2025",
+        end_date: "06-05-2025",
+        requirements: consorciEmpleados,
+        estado: true
+    },
+    {
+        id: '17',
+        img: '/imgs/cursos/consorci/aplicación-cosméticos-para-cambios-color-cabello.webp',
+        codigo: "MF0060",
+        name: 'Aplicación de cosméticos para los cambios de color del cabello',
+        hours: 80,
+        entidad_subvencion: "/imgs/logos/consorci.png",
+        init_date: "01-04-2025",
+        end_date: "20-05-2025",
+        requirements: consorciEmpleados,
+        estado: true
+    },
+    {
+        id: '18',
+        img: '/imgs/cursos/consorci/análisis-cuero-cabelludo-cabello-protocolos-trabajos-técnicos-curas-capilares.webp',
+        codigo: "MF0347",
+        name: 'Análisis del cuero cabelludo y cabello protocolos de trabajos técnicos',
+        hours: 90,
+        entidad_subvencion: "/imgs/logos/consorci.png",
+        init_date: "09-04-2025",
+        end_date: "16-05-2025",
+        requirements: consorciEmpleados,
+        estado: true
+    },
+    {
+        id: '19',
+        img: '/imgs/cursos/consorci/emisión-gestión-llamadas-salientes-en-un-servicio-teleasistencia.webp',
+        codigo: "MF1424",
+        name: 'Emisión y gestión de llamadas salientes en un servicio de teleasistencia',
+        hours: 60,
+        entidad_subvencion: "/imgs/logos/consorci.png",
+        init_date: "28-03-2025",
+        end_date: "22-04-2025",
+        requirements: consorciEmpleados,
+        estado: true
+    },
+    {
+        id: '20',
+        img: '/imgs/cursos/consorci/manejo-herramientas-técnicas-habilidades-para-prestar-servicio-teleasistencia.webp',
+        codigo: "MF1425",
+        name: 'Manejo de las herramientas, técnicas y habilidades para prestar el servicio de teleasistencia',
+        hours: 80,
+        entidad_subvencion: "/imgs/logos/consorci.png",
+        init_date: "23-04-2025",
+        end_date: "22-05-2025",
+        requirements: consorciEmpleados,
+        estado: true
+    },
+
 
 
     

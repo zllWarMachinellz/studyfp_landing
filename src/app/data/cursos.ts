@@ -57,7 +57,7 @@ export const courses: course[] = [
     {
         id: '3',
         img: '/imgs/cursos/ada/ada-comunicación-colaboracion-herramientas-digitales.webp',
-        codigo: "[FCOI10_1]",
+        codigo: "[FCOI18_1]",
         name: 'Comunicación y colaboración con herramientas digitales. Nivel básico',
         hours: 40,
         entidad_subvencion: "/imgs/logos/logo-socs.svg",
@@ -249,7 +249,7 @@ export const courses: course[] = [
     {
         id: '19',
         img: '/imgs/cursos/sectorial/sectorial-tienda-virtual-gestion-comercio.webp',
-        codigo: "[COMM41_4]",
+        codigo: "[COMM0011_4]",
         name: 'Tienda virtual y gestión del comercio electrónico',
         hours: 35,
         entidad_subvencion: "/imgs/logos/consorci.png",
